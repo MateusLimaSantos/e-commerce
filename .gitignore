@@ -1,0 +1,15 @@
+# Ignorar pastas virtuais e cache do Python
+venv/
+env/
+__pycache__/
+*.pyc
+
+# Ignorar banco de dados local
+*.sqlite3
+*.db
+
+# Ignorar arquivos do sistema operacional
+.DS_Store
+
+# Ignorar imagens de teste enviadas no painel
+frontend/uploads/

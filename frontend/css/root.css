@@ -1,0 +1,12 @@
+:root {
+    --color-off-white: #fcfcfc;
+    --color-text-main: #4a4a4a;
+    --color-white: #ffffff;
+    --color-nav-bg: #fdf5f5;
+    --color-nav-border: #ebdada;
+    --color-hero-bg: #e8d0d0;
+    --color-card-border: #dcbaba;
+    --color-placeholder: #f5eaea;
+    --spacing-container: 50px;
+    --spacing-section: 60px;
+}

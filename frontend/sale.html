@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - Loja Modelo</title>
+    
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/sale.css">
+</head>
+<body>
+
+    <header class="main-banner">
+        <h1>Loja Modelo</h1>
+    </header>
+
+    <nav class="navbar">
+        <button class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sale.html">Catálogo</a></li>
+            <li><a href="index.html#about-us-modern">Sobre a Marca</a></li>
+            <li><a href="index.html#contact-info">Contato</a></li>
+            <li><a href="index.html#faq">Dúvidas Frequentes</a></li>
+        </ul>
+        
+        <div class="cart-icon">🛒 Carrinho (0)</div>
+    </nav>
+
+    <main class="store-catalog">
+        
+        <div class="catalog-top-bar">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> &gt; <span>Catálogo</span>
+            </div>
+            <div class="catalog-title-area">
+                <h2>Todos os Produtos</h2>
+                <span class="product-count"><span id="total-count">0</span> itens encontrados</span>
+            </div>
+        </div>
+
+        <div class="megastore-layout">
+            
+            <aside class="advanced-filters">
+                
+                <div class="filter-box">
+                    <h3>Destaques</h3>
+                    <ul>
+                        <li><label><input type="checkbox" id="promo-filter">Apenas Ofertas</label></li>
+                    </ul>
+                </div>
+
+                <div class="filter-box">
+                    <h3>Categorias</h3>
+                    <ul>
+                        <li><label><input type="checkbox" value="tudo" checked> Tudo (<span id="count-tudo">0</span>)</label></li>
+                        <li><label><input type="checkbox" value="pijama"> Pijamas (<span id="count-pijama">0</span>)</label></li>
+                        <li><label><input type="checkbox" value="lingerie"> Lingeries (<span id="count-lingerie">0</span>)</label></li>
+                        <li><label><input type="checkbox" value="macacao"> Macacões (<span id="count-macacao">0</span>)</label></li>
+                    </ul>
+                </div>
+
+                <div class="filter-box">
+                    <h3>Tamanho</h3>
+                    <div class="size-grid">
+                        <button class="size-btn">PP</button>
+                        <button class="size-btn">P</button>
+                        <button class="size-btn">M</button>
+                        <button class="size-btn">G</button>
+                        <button class="size-btn">GG</button>
+                    </div>
+                </div>
+
+                <div class="filter-box">
+                    <h3>Preço</h3>
+                    <ul>
+                        <li><label><input type="radio" name="price" checked> Todos</label></li>
+                        <li><label><input type="radio" name="price"> Até R$ 99</label></li>
+                        <li><label><input type="radio" name="price"> R$ 100 - R$ 199</label></li>
+                        <li><label><input type="radio" name="price"> Acima de R$ 200</label></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <section class="megastore-content">
+                
+                <div class="megastore-toolbar">
+                    <select class="sort-select">
+                        <option>Mais Relevantes</option>
+                        <option>Menor Preço</option>
+                        <option>Maior Preço</option>
+                        <option>Lançamentos</option>
+                    </select>
+                </div>
+
+                <div class="dense-grid" id="dynamic-product-grid">
+                    
+                </div>
+
+                <div class="pagination">
+                    </div>
+
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-col brand-col">
+                <h4>Loja Modelo</h4>
+                <p>Conforto e elegância para os seus melhores momentos de descanso.</p>
+                <div class="social-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">TikTok</a>
+                </div>
+            </div>
+
+            <div class="footer-col links-col">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="sale.html">Catálogo</a></li>
+                    <li><a href="index.html#about-us-modern">Sobre a Marca</a></li>
+                    <li><a href="index.html#contact-info">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col links-col">
+                <h4>Atendimento</h4>
+                <ul>
+                    <li><a href="index.html#faq">Dúvidas Frequentes</a></li>
+                    <li><a href="#">Trocas e Devoluções</a></li>
+                    <li><a href="#">Políticas de Privacidade</a></li>
+                    <li><a href="#">Rastrear Pedido</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col payment-col">
+                <h4>Compra Segura</h4>
+                <p>Ambiente 100% criptografado e seguro para seus dados.</p>
+                <p class="payment-methods">PIX • Cartão de Crédito • Boleto</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Loja Modelo. Todos os direitos reservados.</p>
+            <p>CNPJ: 00.000.000/0001-00</p>
+        </div>
+    </footer>
+
+    <div class="cart-overlay"></div>
+    <aside class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Seu Carrinho</h2>
+            <button class="close-cart-btn">&times;</button>
+        </div>
+        
+        <div class="cart-items-container">
+            </div>
+        
+        <div class="cart-footer">
+            <div class="cart-total" style="margin-bottom: 15px;">
+                <span>Total:</span>
+                <span id="cart-total-price" style="font-weight: bold; font-size: 1.2rem; color: #ff4d4d;">R$ 0,00</span>
+            </div>
+            <button id="checkout-whatsapp-btn" class="action-btn" style="width: 100%; padding: 15px; font-size: 16px; background-color: #25D366; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">
+                        Finalizar Pedido pelo WhatsApp
+            </button>
+        </div>
+    </aside>
+
+    <div id="product-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <span class="close-modal-btn">&times;</span>
+            <div class="modal-grid">
+                <div class="modal-image-container">
+                    <img id="modal-img" src="" alt="Foto do Produto">
+                </div>
+                <div class="modal-info">
+                    <span id="modal-category" class="brand-label" style="text-transform: capitalize;"></span>
+                    <h2 id="modal-title">Nome do Produto</h2>
+                    <p id="modal-price" class="price" style="font-size: 24px; margin-bottom: 20px;">R$ 0,00</p>
+                    
+                    <div class="modal-description">
+                        <h3>Detalhes da Peça:</h3>
+                        <p id="modal-desc">Descrição do produto vai aparecer aqui...</p>
+                    </div>
+
+                    <div class="modal-size-info">
+                        <strong>Tamanho Único Disponível:</strong> <span id="modal-size"></span>
+                    </div>
+
+                    <button id="modal-add-to-cart" class="action-btn modal-add-btn add-to-cart-btn" style="width: 100%; margin-top: 20px; padding: 15px; font-size: 16px;">
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

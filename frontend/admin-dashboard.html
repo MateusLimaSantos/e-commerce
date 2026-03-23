@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Controle - Loja Modelo</title>
+    
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/admin-dashboard.css">
+</head>
+<body>
+
+    <header class="admin-header">
+        <div class="header-logo">
+            <h2>Loja Modelo <span>| Painel Admin</span></h2>
+        </div>
+        <div class="header-actions">
+            <span id="admin-user-email">admin@lojamodelo.com.br</span>
+            <button id="logout-btn" class="logout-btn">Sair do Sistema</button>
+        </div>
+    </header>
+
+    <main class="admin-container">
+        
+        <section class="admin-card add-product-section">
+            <h3>Adicionar Nova Peça ao Estoque</h3>
+            
+            <form id="add-product-form" onsubmit="event.preventDefault();">
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label>Nome do Produto</label>
+                        <input type="text" id="prod-name" required placeholder="Ex: Pijama de Seda Longo">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Categoria</label>
+                        <select id="prod-category" required>
+                            <option value="pijama">Pijama</option>
+                            <option value="lingerie">Lingerie</option>
+                            <option value="macacao">Macacão</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Tamanho</label>
+                        <select id="prod-size" required>
+                            <option value="PP">PP</option>
+                            <option value="P">P</option>
+                            <option value="M">M</option>
+                            <option value="G">G</option>
+                            <option value="GG">GG</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Preço de Venda (R$)</label>
+                        <input type="number" id="prod-price" step="0.01" required placeholder="139.90">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Preço Antigo (Opcional - R$)</label>
+                        <input type="number" id="prod-old-price" step="0.01" placeholder="Ex: 159.90">
+                    </div>
+
+                    <div class="input-group checkbox-group">
+                        <label>
+                            <input type="checkbox" id="prod-sale"> Ativar Selo "🔥 Oferta"
+                        </label>
+                    </div>
+
+                    <div class="input-group" style="grid-column: 1 / -1;">
+                        <label>Foto da Peça (Upload do Computador)</label>
+                        <input type="file" id="prod-image-file" accept="image/png, image/jpeg, image/webp" style="padding: 7px; background: #fff;">
+                        <small style="color: #888; margin-top: 5px; display: block;">Envie arquivos .jpg ou .png</small>
+                    </div>
+
+                    <div class="input-group" style="grid-column: 1 / -1;">
+                        <label>Descrição e Detalhes da Peça</label>
+                        <textarea id="prod-description" rows="3" placeholder="Ex: Pijama 100% algodão, blusa de alcinha com regulagem e short com elástico confortável..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; resize: vertical;"></textarea>
+                    </div>
+                </div>
+
+                <div id="form-msg" class="msg-box hidden"></div>
+
+                <button type="submit" id="save-product-btn" class="action-btn">Salvar Produto no Banco de Dados</button>
+            </form>
+        </section>
+
+        <section class="admin-card inventory-section">
+            <h3>Estoque Atual (<span id="total-inventory">0</span> peças)</h3>
+            
+            <div class="inventory-controls">
+                <input type="text" id="search-inventory" placeholder="🔍 Buscar por Nome ou ID da peça..." class="search-input">
+            </div>
+            
+            <div class="table-responsive">
+                <table class="inventory-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Foto</th> <th>Nome da Peça</th>
+                            <th>Categoria</th>
+                            <th>Tamanho</th>
+                            <th>Preço (R$)</th>
+                            <th>Promoção</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="inventory-tbody">
+                        </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/admin-dashboard.js"></script>
+</body>
+</html>

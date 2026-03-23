@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Administrativo - Loja Modelo</title>
+    
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/admin-login.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <h1>Painel da Loja</h1>
+                <p>Acesso restrito à administração</p>
+            </div>
+
+            <div id="error-message" class="error-box hidden"></div>
+
+            <form id="admin-login-form" onsubmit="event.preventDefault();">
+                <div class="input-group">
+                    <label for="email">E-mail Administrativo</label>
+                    <input type="email" id="email" name="email" required placeholder="admin@lojamodelo.com.br" autofocus>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Senha de Acesso</label>
+                    <input type="password" id="password" name="password" required placeholder="••••••••">
+                </div>
+
+                <button type="submit" id="login-btn" class="login-btn">Entrar no Sistema</button>
+            </form>
+            
+            <div class="login-footer">
+                <a href="index.html">&larr; Voltar para a loja</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/admin-login.js"></script>
+</body>
+</html>
